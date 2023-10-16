@@ -16,3 +16,9 @@ Outputs:
 api_endpoint = "https://example-execute-url.execute-api.us-west-2.amazonaws.com/prod/word"
 helper_cli_command = "aws lambda invoke --function-name RandomWordGenerator results.json"
 ```
+## Cleaning Up
+Once you're sick of these nonsensical words, destroy the application 
+
+```bash
+terraform destroy
+```
