@@ -8,7 +8,8 @@ Clone the repository and run `terraform apply` to deploy the application
 ```bash
 git clone git@github.com:kebgib/random-word-api.git
 cd random-word-api
-terraform apply
+terraform init  # Only required on first run
+terraform apply -auto-approve
 ```
 Use the terraform outputs to test your new API and start generating words
 ```python
@@ -20,5 +21,5 @@ helper_cli_command = "aws lambda invoke --function-name RandomWordGenerator resu
 Once you're sick of these nonsensical words, destroy the application 
 
 ```bash
-terraform destroy
+terraform destroy -auto-approve
 ```
