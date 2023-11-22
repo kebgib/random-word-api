@@ -13,5 +13,7 @@ output "helper_cli_command" {
 
 output "api_endpoint" {
   description = "The endpoint for the API."
-  value       = "${aws_api_gateway_deployment.deployment.invoke_url}${aws_api_gateway_stage.stage.stage_name}/${aws_api_gateway_resource.proxy.path_part}"
+#  value       = "${aws_api_gateway_deployment.deployment.invoke_url}${aws_api_gateway_stage.stage.stage_name}/${aws_api_gateway_resource.proxy.path_part}"
+  value       = "${aws_api_gateway_deployment.deployment.invoke_url}${aws_api_gateway_stage.stage.stage_name}/${aws_api_gateway_resource.v1.path_part}/${aws_api_gateway_resource.word.path_part}"
+
 }
